@@ -125,7 +125,14 @@ const fakelogs = [
 
 const News = styled.div`
   height: 100%;
-  width: 640px;
+  @media (min-width: 640px) {
+    width: 640px;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    margin-bottom: 20px !important;
+  }
 `;
 
 const NewsItem = styled.div`
@@ -142,6 +149,11 @@ const NewsItem = styled.div`
   border-radius: 4px;
   border: 1px solid #343536;
   padding-left: 40px;
+
+  @media (max-width: 640px) {
+    margin:20px 10px;
+    margin-top: 20px;
+  }
 
   &:hover {
     border: 1px solid #818384;
