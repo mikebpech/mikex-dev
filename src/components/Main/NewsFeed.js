@@ -39,7 +39,7 @@ class NewsFeed extends Component {
                   <p>{item.body}</p>
                 </div>
                 <div className="body-image">
-                    <img src={item.image} alt=""/>
+                  <img src={item.image} alt="" />
                 </div>
               </div>
               <div className="body-buttons">
@@ -49,16 +49,18 @@ class NewsFeed extends Component {
                     2.8k Comments
                   </div>
                   <div className="button">
-                  <i className="fas fa-award"></i>
+                    <i className="fas fa-award"></i>
                     Give Award
                   </div>
                   <div className="button">
-                  <i className="fas fa-share"></i>
-
+                    <i className="fas fa-share"></i>
                     Share
                   </div>
-                  <div style={{minWidth: '0'}} className="button">
-                  <i style={{margin: "0"}} className="fas fa-ellipsis-h"></i>
+                  <div style={{ minWidth: "0" }} className="button">
+                    <i
+                      style={{ margin: "0" }}
+                      className="fas fa-ellipsis-h"
+                    ></i>
                   </div>
                 </div>
               </div>
@@ -80,7 +82,8 @@ const fakelogs = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores ratione officia architecto facere, accusantium doloremque ullam a voluptates quibusdam, temporibus tempore dolore praesentium possimus beatae ex ipsa quia veritatis.",
     votes: 54,
     icon: "fab fa-twitter",
-    image: "https://static.wixstatic.com/media/308ab5_04a5d5981d6b4818aa02e60f24fe316a~mv2_d_2000_2000_s_2.png/v1/fill/w_644,h_404,al_c,q_80,usm_0.66_1.00_0.01/Full-color-1.webp"
+    image:
+      "https://static.wixstatic.com/media/308ab5_04a5d5981d6b4818aa02e60f24fe316a~mv2_d_2000_2000_s_2.png/v1/fill/w_644,h_404,al_c,q_80,usm_0.66_1.00_0.01/Full-color-1.webp"
   },
   {
     subject: "r/playerrecognition",
@@ -227,23 +230,23 @@ const NewsItem = styled.div`
           display: flex;
           align-items: center;
           margin-right: 4px;
-    min-width: 25px;
-    white-space: nowrap;
-    word-break: normal;
-    border-radius: 2px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 16px;
-    padding: 5px;
+          min-width: 25px;
+          white-space: nowrap;
+          word-break: normal;
+          border-radius: 2px;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 16px;
+          padding: 5px;
 
-    i {
-      margin-right: 5px;
-    }
+          i {
+            margin-right: 5px;
+          }
 
-    &:hover {
-      background-color: rgba(215,218,220,0.1);
-    outline: none;
-    }
+          &:hover {
+            background-color: rgba(215, 218, 220, 0.1);
+            outline: none;
+          }
         }
       }
     }
@@ -264,11 +267,10 @@ const NewsItem = styled.div`
         align-self: center;
 
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border: 1px solid #818384;
-
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border: 1px solid #818384;
         }
       }
 
