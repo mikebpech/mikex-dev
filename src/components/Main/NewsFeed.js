@@ -43,7 +43,24 @@ class NewsFeed extends Component {
                 </div>
               </div>
               <div className="body-buttons">
-                <div className="buttons">buttons</div>
+                <div className="buttons">
+                  <div className="button">
+                    <i className="fas fa-comments-alt"></i>
+                    2.8k Comments
+                  </div>
+                  <div className="button">
+                  <i className="fas fa-award"></i>
+                    Give Award
+                  </div>
+                  <div className="button">
+                  <i className="fas fa-share"></i>
+
+                    Share
+                  </div>
+                  <div style={{minWidth: '0'}} className="button">
+                  <i style={{margin: "0"}} className="fas fa-ellipsis-h"></i>
+                  </div>
+                </div>
               </div>
             </div>
           </NewsItem>
@@ -205,6 +222,29 @@ const NewsItem = styled.div`
         padding: 0 8px 0 4px;
         -ms-flex-positive: 1;
         flex-grow: 1;
+
+        .button {
+          display: flex;
+          align-items: center;
+          margin-right: 4px;
+    min-width: 25px;
+    white-space: nowrap;
+    word-break: normal;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 5px;
+
+    i {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      background-color: rgba(215,218,220,0.1);
+    outline: none;
+    }
+        }
       }
     }
 
