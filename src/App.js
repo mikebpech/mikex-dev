@@ -5,6 +5,7 @@ import NewsFeed from './components/Main/NewsFeed';
 import TopStories from './components/Sidebar/TopStories';
 import CoffeeBuy from './components/Sidebar/CoffeeBuy';
 import TrendingSkills from './components/Sidebar/TrendingSkills';
+import Contributors from './components/Sidebar/Contributors';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <NewsFeed />
         <RightSide>
         <TopStories />
+        <Contributors />
         <CoffeeBuy />
         <TrendingSkills />
         </RightSide>
