@@ -20,6 +20,9 @@ class Navigator extends Component {
 export default Navigator;
 
 const Nav = styled.div`
+@media (max-width: 640px) {
+    display: none;
+}
 cursor: pointer;
     width: 230px;
     height: 36px;

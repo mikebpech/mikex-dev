@@ -7,7 +7,7 @@ class Contributors extends Component {
     return (
       <Wrapper>
         <Top>
-          <div className="text">CONTRIBUTORS</div>
+          <div className="text">MONTHLY CONTRIBUTORS</div>
         </Top>
         <Main>
             {contributors.map(cont => (
@@ -36,6 +36,7 @@ const Main = styled.div`
 `
 
 const Item = styled.a`
+    margin-right: 10px;
     &:hover {
         background-color: #2a2a2b;
         border-color: #fff;
@@ -51,7 +52,7 @@ const Item = styled.a`
     align-items: center;
     justify-content: center;
     background-color: #1a1a1b;
-    border: thin solid #343536;
+    border: thin solid transparent;
     padding: 3px;
 
     img {

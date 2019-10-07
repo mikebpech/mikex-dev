@@ -15,9 +15,12 @@ class Search extends Component {
 export default Search;
 
 const SearchWrapper = styled.div`
+@media (max-width: 640px) {
+    display: none;
+}
   position: relative;
   margin: 0 16px;
-  width: max-content;
+  width: auto;
   max-width: 500px;
   flex-grow: 1;
   border: 1px solid transparent;
