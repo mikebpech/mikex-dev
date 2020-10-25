@@ -14,58 +14,60 @@ class NewsFeed extends Component {
     return (
       <News>
         {fakelogs.map(item => (
-          <NewsItem key={item.subject}>
-            <div className="sidebar">
-              <div className="arrows">
-                <i class="fas fa-arrow-alt-up"></i>
-                <b>{item.votes}</b>
-                <i class="fas fa-arrow-alt-down"></i>
-              </div>
-            </div>
-            <div className="main-content">
-              <div className="header">
-                <i className={item.icon}></i>
-                {item.subject}
-                <span>· Posted by u/mikex</span>
-              </div>
-              <div className="post-title">
-                <h3 className="title">{item.title}</h3>
-              </div>
-              <div className="body">
-                <div className="body-text">
-                  <p>{item.body}</p>
-                  <p>{item.body}</p>
-                  <p>{item.body}</p>
-                  <p>{item.body}</p>
-                </div>
-                <div className="body-image">
-                  <img src={item.image} alt="" />
+          <a href={item.link} target="_blank">
+            <NewsItem key={item.subject}>
+              <div className="sidebar">
+                <div className="arrows">
+                  <i class="fas fa-arrow-alt-up"></i>
+                  <b>{item.votes}</b>
+                  <i class="fas fa-arrow-alt-down"></i>
                 </div>
               </div>
-              <div className="body-buttons">
-                <div className="buttons">
-                  <div className="button">
-                    <i className="fas fa-comments-alt"></i>
-                    2.8k Comments
+              <div className="main-content">
+                <div className="header">
+                  <i className={item.icon}></i>
+                  {item.subject}
+                  <span>· Posted by u/mikex</span>
+                </div>
+                <div className="post-title">
+                  <h3 className="title">{item.title}</h3>
+                </div>
+                <div className="body">
+                  <div className="body-text">
+                    <p>{item.body}</p>
+                    <p>{item.body}</p>
+                    <p>{item.body}</p>
+                    <p>{item.body}</p>
                   </div>
-                  <div className="button">
-                    <i className="fas fa-award"></i>
-                    Give Award
+                  <div className="body-image">
+                    <img src={item.image} alt="" />
                   </div>
-                  <div className="button">
-                    <i className="fas fa-share"></i>
-                    Share
-                  </div>
-                  <div style={{ minWidth: "0" }} className="button">
-                    <i
-                      style={{ margin: "0" }}
-                      className="fas fa-ellipsis-h"
-                    ></i>
+                </div>
+                <div className="body-buttons">
+                  <div className="buttons">
+                    <div className="button">
+                      <i className="fas fa-comments-alt"></i>
+                      2.8k Comments
+                    </div>
+                    <div className="button">
+                      <i className="fas fa-award"></i>
+                      Give Award
+                    </div>
+                    <div className="button">
+                      <i className="fas fa-share"></i>
+                      Share
+                    </div>
+                    <div style={{ minWidth: "0" }} className="button">
+                      <i
+                        style={{ margin: "0" }}
+                        className="fas fa-ellipsis-h"
+                      ></i>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </NewsItem>
+            </NewsItem>
+          </a>
         ))}
       </News>
     );
@@ -76,51 +78,49 @@ export default NewsFeed;
 
 const fakelogs = [
   {
-    subject: "r/twatter",
-    title: "Twatter - Working Twitter Clone",
-    body:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores ratione officia architecto facere, accusantium doloremque ullam a voluptates quibusdam, temporibus tempore dolore praesentium possimus beatae ex ipsa quia veritatis.",
-    votes: 54,
+    subject: "r/halogamefinder",
+    title: "Halo Game Finder",
+    subtitle:
+      "Made with ReactJS, Styled Components, Socket.IO & MongoDB",
+    body: "HaloGameFinder is a real-time tool which allows people to post and find custom game lobbies on the popular game 'Halo', this site uses SocketIO to refresh the currently posted/deleted games in real time. This site also has a user registration/login system along with a VIP payment system via Stripe.",
+    votes: 128,
     icon: "fab fa-twitter",
+    link: "https://halogamefinder.com",
     image:
-      "https://static.wixstatic.com/media/308ab5_04a5d5981d6b4818aa02e60f24fe316a~mv2_d_2000_2000_s_2.png/v1/fill/w_644,h_404,al_c,q_80,usm_0.66_1.00_0.01/Full-color-1.webp"
+      "https://webstockreview.net/images/master-chief-helmet-png.png"
   },
   {
     subject: "r/playerrecognition",
     title: "Player Recognition - Verified Stat Platform",
     body:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores ratione officia architecto facere, accusantium doloremque ullam a voluptates quibusdam, temporibus tempore dolore praesentium possimus beatae ex ipsa quia veritatis.",
+      "Player Recognition is a completely custom tool for Athletes to get their athletic stats verified and posted onto a platform for coaches to discover. This has been made with ReactJS/MongoDB and is still a work in progress.",
     votes: 232,
+    link: "https://playerrecognition.com",
     icon: "fas fa-football-helmet",
     image: "https://i.gyazo.com/6acbd8f302cb007971be06b26de68143.jpg"
+  },
+  {
+    subject: "r/halogamefinder",
+    title: "Halo Game Finder",
+    subtitle:
+      "Made with ReactJS, Styled Components, Socket.IO & MongoDB",
+    body: "HaloGameFinder is a real-time tool which allows people to post and find custom game lobbies on the popular game 'Halo', this site uses SocketIO to refresh the currently posted/deleted games in real time. This site also has a user registration/login system along with a VIP payment system via Stripe.",
+    votes: 128,
+    icon: "fab fa-twitter",
+    link: "https://halogamefinder.com",
+    image:
+      "https://webstockreview.net/images/master-chief-helmet-png.png"
   },
   {
     subject: "r/playerrecognition",
     title: "Player Recognition - Verified Stat Platform",
     body:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores ratione officia architecto facere, accusantium doloremque ullam a voluptates quibusdam, temporibus tempore dolore praesentium possimus beatae ex ipsa quia veritatis.",
+      "Player Recognition is a completely custom tool for Athletes to get their athletic stats verified and posted onto a platform for coaches to discover. This has been made with ReactJS/MongoDB and is still a work in progress.",
     votes: 232,
+    link: "https://playerrecognition.com",
     icon: "fas fa-football-helmet",
     image: "https://i.gyazo.com/6acbd8f302cb007971be06b26de68143.jpg"
   },
-  {
-    subject: "r/playerrecognition",
-    title: "Player Recognition - Verified Stat Platform",
-    body:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores ratione officia architecto facere, accusantium doloremque ullam a voluptates quibusdam, temporibus tempore dolore praesentium possimus beatae ex ipsa quia veritatis.",
-    votes: 232,
-    icon: "fas fa-football-helmet",
-    image: "https://i.gyazo.com/6acbd8f302cb007971be06b26de68143.jpg"
-  },
-  {
-    subject: "r/playerrecognition",
-    title: "Player Recognition - Verified Stat Platform",
-    body:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores ratione officia architecto facere, accusantium doloremque ullam a voluptates quibusdam, temporibus tempore dolore praesentium possimus beatae ex ipsa quia veritatis.",
-    votes: 232,
-    icon: "fas fa-football-helmet",
-    image: "https://i.gyazo.com/6acbd8f302cb007971be06b26de68143.jpg"
-  }
 ];
 
 const News = styled.div`
@@ -132,6 +132,14 @@ const News = styled.div`
   @media (max-width: 640px) {
     width: 100%;
     margin-bottom: 20px !important;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: inherit;
+    }
   }
 `;
 

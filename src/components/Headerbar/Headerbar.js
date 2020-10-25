@@ -21,12 +21,16 @@ class Headerbar extends Component {
           </div>
           <div className="right">
             <Actions>
+              <a href="https://resume.mikex.dev">
               <div className="item">
                 <i className="fas fa-file-download"></i>
               </div>
-              <div className="item">
-                <i className="fas fa-mail-bulk"></i>
-              </div>
+              </a>
+              <a href="mailto:mikebpechousek@gmail.com">
+                <div className="item">
+                  <i className="fas fa-mail-bulk"></i>
+                </div>
+              </a>
               <div className="item">
                 <i className="fas fa-star"></i>
               </div>
@@ -49,6 +53,14 @@ class Headerbar extends Component {
 export default Headerbar;
 
 const HeaderWrapper = styled.header`
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: inherit;
+    }
+  }
   width: 100%;
   overflow: hidden;
   position: fixed;
